@@ -7,8 +7,8 @@ coffee_maker = CoffeeMaker()
 menu = Menu()
 
 while machine_is_on:
-    menu_items = menu.get_items()
-    user_choice = input(f"What would you like? ({menu_items}):").lower()
+    menu_options = menu.get_items()
+    user_choice = input(f"What would you like? ({menu_options}):").lower()
     drink = menu.find_drink(user_choice)
     if user_choice == 'off':
         machine_is_on = False
